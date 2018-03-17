@@ -1,6 +1,12 @@
-from node
+FROM keymetrics/pm2:latest-alpine
+
 WORKDIR /app
 ADD . /app
+
+ENV PORT 3000
 RUN npm install
+RUN ls -al -R
+
 EXPOSE 3000
-CMD npm start
+
+CMD [ "pm2-runtime", "start", "pm2.json" ]
