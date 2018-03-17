@@ -5,7 +5,7 @@ ADD . /app
 
 ENV PORT 3000
 RUN npm install
-RUN ls -al -R -I=node_modules
+RUN ls -al -R | grep -v 'node_modules'
 
 EXPOSE 3000
 
