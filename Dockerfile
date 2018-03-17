@@ -1,4 +1,4 @@
-from node:lastest
+from node
 WORKDIR /app
 ADD . /app
 RUN npm install
